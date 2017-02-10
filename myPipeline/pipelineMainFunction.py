@@ -33,7 +33,23 @@ def delete_project(project_path, project_name, *pargs):
 ### ----- save_selected ----- ###
 ## save currently selected item with given name in the folder(category) user choose ##
 ## input item_name : str
-## input folder : str
+## input folder_path : str
 ## rtype : none
 ## Author : Qiu Siyuan
 ## -------------------------------------------------------------- ##
+def save_selected( item_name,folder_path):
+    cmds.file(folder_path+'/'+item_name, exportSelected = True,type = "mayaBinary")
+
+### ----- save_scene ------ ###
+## save the whole scene to the folder user choose ##
+## input scene_name : str
+## input folder_path : str
+## rtype : none
+## Author : Qiu Siyuan
+## ----------------------------------------------------------------- ##
+def save_scene(scene_name, folder_path):
+    cmds.file(rename = scene_name)
+    cmds.file(folder_path, save = True, type = "mayaBinary")
+    
+##
+    
