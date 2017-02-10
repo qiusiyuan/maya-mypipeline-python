@@ -48,8 +48,8 @@ def save_selected( item_name,folder_path):
 ## Author : Qiu Siyuan
 ## ----------------------------------------------------------------- ##
 def save_scene(scene_name, folder_path):
-    cmds.file(rename = scene_name)
-    cmds.file(folder_path, save = True, type = "mayaBinary")
+    cmds.file(rename = folder_path + '/'+ scene_name)
+    cmds.file(save = True, type = "mayaBinary")
     
 ##
     
