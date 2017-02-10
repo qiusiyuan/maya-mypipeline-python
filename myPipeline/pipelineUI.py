@@ -31,6 +31,7 @@ add_on_list = ["cache/nCache/fluid","data","images","scenes/edits","renderData/f
 ### this is an extending function to deleteUI() ###
 ## specify the condition to delete ##
 # input: name of window to delete #
+## Author : Qiu Siyuan
 ###-------------------------------------------------------------##
 def myDeleteUI(name,*pargs):
     if cmds.window(name,exists =True):
@@ -41,6 +42,7 @@ def myDeleteUI(name,*pargs):
 ## create new project ###
 ## input : none
 ## rtype : none
+## Author : Qiu Siyuan
 ## ------------------------------------------------------------##
 def create_new(*pargs):
         global new_name
@@ -75,6 +77,7 @@ def create_new(*pargs):
 ## this prompt a new Project UI ##
 ## Input : none
 ## rtype : none
+## Author : Qiu Siyuan
 ## -----------------------------------------------------##
 def newProUI(*parg):
     global chosen_dir,new_name
@@ -93,6 +96,7 @@ def newProUI(*parg):
 ## UI for delete project ##
 ## project_name : str
 ## rtype : none    
+## Author : Qiu Siyuan
 ## --------------------------------------------------------##
 def deleteProjectUI(project_name, *pargs):
     print "2333"    
@@ -187,6 +191,7 @@ def myFileBrowser(*pargs):
 ###  pumped information, click "Close" to close the window  ###
 ## Input  : none
 ## rtype : none
+## Author : Qiu Siyuan
 ###----------------------------------------###
 def aboutPipeline(*pargs):
     if cmds.window("about", exists = True):
@@ -207,6 +212,7 @@ def aboutPipeline(*pargs):
 #mainUI create the main body of this pipeline user interface #
 ## input : none
 ## rtype : none
+## Author : Qiu Siyuan
 ###--------------------------------------------------------------##
 def mainUI():
     global current_project
